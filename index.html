@@ -61,14 +61,14 @@ ol.steps li::before{content:counter(s);flex:0 0 32px;height:32px;border-radius:5
 .join p{color:var(--muted);margin:10px 0 22px}.join .download-guide-link{margin:16px 0 0}.download-guide-link .btn{background:transparent;color:var(--accent);}
 
 
-.pics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;overflow:visible;padding-bottom:0}
-.pic{width:100%;max-width:none;min-width:0;margin:0;background:var(--panel);border-radius:8px;overflow:hidden;border:1px solid var(--line)}
-.pic img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;background:var(--panel)}
+.pics{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
+.pic{flex:0 0 78%;max-width:300px;margin:0;scroll-snap-align:start;background:var(--panel);border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.pic img{display:block;width:100%;aspect-ratio:2/3;object-fit:cover}
 .pic figcaption{padding:16px 18px 20px;border-top:4px solid var(--accent)}
 .pic h3{font-size:20px;margin-bottom:8px}
 .pic p{margin:0;color:var(--muted);font-size:16px}
 .pic a{color:var(--accent);font-weight:500}
-@media (min-width:700px){.pics{grid-template-columns:repeat(4,minmax(0,1fr));overflow:visible}.pic{max-width:none}}
+@media (min-width:700px){.pics{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible}.pic{max-width:none}}
 
 .install-intro{color:var(--muted);margin:-10px 0 24px}
 .install-gallery{display:grid;grid-template-columns:1fr;gap:22px}
